@@ -9,12 +9,15 @@ class FactoryCarBase
 {
 public:
 	virtual Car * CreateCar() = 0;
+	virtual ~FactoryCarBase() = default;
+protected:
+	FactoryCarBase() = default;
 };
 
 class FactoryBMW : public FactoryCarBase
 {
 public:
-	Car * CreateCar()
+	Car * CreateCar() override
 	{
 		return new BMW;
 	}
@@ -23,7 +26,7 @@ public:
 class FactoryNIO : public FactoryCarBase
 {
 public:
-	Car * CreateCar()
+	Car * CreateCar() override
 	{
 		return new NIO;
 	}

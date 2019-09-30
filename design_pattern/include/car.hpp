@@ -9,12 +9,15 @@ class Car
 {
 public:
 	virtual void name() = 0;
+	virtual ~Car() = default;
+protected:
+	Car() = default;
 };
 
 class BMW : public Car
 {
 public:
-	void name()
+	void name() override
 	{
 		std::cout << "my name is BMW" << std::endl;
 	}
@@ -23,7 +26,7 @@ public:
 class NIO : public Car
 {
 public:
-	void name()
+	void name() override
 	{
 		std::cout << "my name is NIO" << std::endl;
 	}
