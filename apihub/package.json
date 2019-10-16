@@ -1,0 +1,15 @@
+{
+  "name": "apihub",
+  "version": "1.0.0",
+  "description": "对业务api接口进行整合，为前端页面提供api接口的胶水层",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zhangsunbaohong",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.10.0",
+    "koa-router": "^7.4.0"
+  }
+}
