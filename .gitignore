@@ -1,4 +1,5 @@
-build/
-.vscode/
-.exe/
+**/build/
+/.vscode/
+**/CMakeFiles/
+/.exe/
 */node_modules
