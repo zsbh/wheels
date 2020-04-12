@@ -167,9 +167,9 @@ void str_replace(string *dst, string *sub, string *src, int pos)
 {
 	assert(NULL != dst && NULL != sub && NULL != src);
 
-	int end = dst->length - src->length;//β
+	int end = dst->length - src->length;
 
-	for (int i = pos; i <= end; )   //����ѭ������
+	for (int i = pos; i <= end; )   
 	{
 		int j = 0;
 		while (j < src->length)
@@ -192,7 +192,7 @@ void str_replace(string *dst, string *sub, string *src, int pos)
 	}
 }
 
-void str_replace_all(string *dst, string *sub, string *src) //��ȫ���滻
+void str_replace_all(string *dst, string *sub, string *src) 
 {
 	assert(NULL != dst && NULL != sub && NULL != src);
 
@@ -202,7 +202,7 @@ void str_replace_all(string *dst, string *sub, string *src) //��ȫ����
 
 
 
-void str_cat(string *dst, string *src)//��ָ���ַ������ӵ����ַ����Ľ�β
+void str_cat(string *dst, string *src)
 {
 	assert(NULL != dst && NULL != src);
 
@@ -212,21 +212,21 @@ void str_cat(string *dst, string *src)//��ָ���ַ������ӵ�
 	memcpy(&dst->str[pos], src->str, sizeof(char) * src->length);
 }
 
-char str_cmp_ignoreCase(string *dst, string *src)//�����Ǵ�Сд
+char str_cmp_ignoreCase(string *dst, string *src)
 {
 	assert(NULL != dst && NULL != src);
 
 	return true;
 }
 
-bool start_with(string *dst, string *prefix)  //���Դ��ַ����Ƿ���ָ����ǰ׺��ʼ��
+bool start_with(string *dst, string *prefix)  
 {
 	assert(NULL != dst && NULL != prefix);
 
 	return false;
 }
 
-bool end_with(string dst, string *prefix)    // ���Դ��ַ����Ƿ���ָ���ĺ�׺��ʼ��
+bool end_with(string dst, string *prefix)   
 {
 	return false;
 }

@@ -48,7 +48,7 @@ void insert_tail(void **head, void **src)
 
 	void *cur = head;
 
-	while (NULL != *(void **)cur)    //void *不可解引用，解引用：以当前值为地址，以void类型为类型，没有void类型
+	while (NULL != *(void **)cur)    
 	{
 		cur = *(void **)cur;
 	}
@@ -90,7 +90,7 @@ void replace_data(void **head, void *dst, void **src)
 
 	void *cur = head;
 
-	while (NULL != cur)    //void *不可解引用，解引用：以当前值为地址，以void类型为类型，没有void类型
+	while (NULL != cur)    
 	{
 		if (dst == cur)
 		{
