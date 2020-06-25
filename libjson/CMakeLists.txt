@@ -4,3 +4,4 @@ include_directories(
   include
 )
 
+add_library(libjson STATIC tokenizer.cpp)
