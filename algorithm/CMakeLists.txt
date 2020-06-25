@@ -1,8 +1,6 @@
-cmake_minimum_required(VERSION 2.8)
 
-include_directories(./include)
+include_directories(include)
 
-add_executable(util-test test/util-test.cpp)
-add_executable(search-test test/search-test.cpp)
-add_executable(sort-test test/sort-test.cpp)
-add_executable(hello test/hello.cpp)
+add_executable(util_test test/util_test.cpp)
+add_executable(search_test test/search_test.cpp)
+add_executable(sort_test test/sort_test.cpp)

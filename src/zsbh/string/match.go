@@ -85,41 +85,6 @@ func KMPMatch(text, pattern string) int {
 	return -1
 }
 
-func PreBmGs() {
-
-	//BCABABAB
-	var i, j int
-	var m int = 8
-	var suff = []
-	var bmGs [8]int
-
-	// 先全部赋值为m，包含Case3
-	for i = 0; i < m; i++ {
-		bmGs[i] = m
-	}
-
-	// Case2
-	j = 0
-	for i = m - 1; i >= 0; i-- {
-		if suff[i] == i+1 {
-			for ; j < m-1-i; j++ {
-				if bmGs[j] == m {
-					bmGs[j] = m - i - 1
-				}
-			}
-		}
-	}
-	//7 7 7 7 7 7 7 8
-
-	// Case1
-	for i = 0; i <= m-2; i++ {
-		bmGs[m-1-suff[i]] = m - 1 - i
-	}
-	//7 7 7 2 7 4 7 1
-
-}
-
-
 func MAX(x, y int) int {
 	if x > y {
 		return x
