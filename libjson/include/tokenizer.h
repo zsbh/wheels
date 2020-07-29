@@ -10,7 +10,7 @@ namespace zsbh
 namespace json
 {
 enum TokenType {
-    TOKEN_COMMA = 1 << 1,       // ,
+    TOKEN_COMMA = 1 << 1,       //,
     TOKEN_QUOTE = 1 << 2,       //"
     TOKEN_COLON = 1 << 3,       //:
     TOKEN_BRACE_L = 1 << 4,     //{
@@ -26,20 +26,24 @@ enum TokenType {
 struct Token {
     TokenType type_;
     std::string value_;
+
+    operator bool() {
+        return value_ == "";
+    }
 };
 
 class TokenReader
 {
 private:
-    std::ostream stream_;
+    std::istream stream_;
 
     Token ReadNull();
     Token ReadBoolean();
     Token ReadString();
     Token ReadNumber();
 public:
-    TokenReader(const std::string& text);
-    TokenReader(const std::ostream& file);
+    TokenReader(const std::string& text): stream_(std::ostringstream(text).rdbuf()) {}
+    TokenReader(std::ostream& file): stream_(file.rdbuf()) {}
     ~TokenReader() = default;
 
     Token Next();
