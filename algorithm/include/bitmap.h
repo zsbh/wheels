@@ -1,5 +1,5 @@
-#ifndef _BITMAP_H_
-#define _BITMAP_H_
+#ifndef _ZSBH_BITMAP_H_
+#define _ZSBH_BITMAP_H_
 
 #include <cstring>
 namespace zsbh {
@@ -43,26 +43,26 @@ public:
 		return 0;
 	}
 private:
-	
 	int resize()
 	{
 		uint src_size = size;
-		if (size * 2 - 0x11111111 <= 0)
+		if (size * 2 - 0x11111111 > 0)
 		{
-			size *= 2;
-			char *tmp = new char[size];
-			memcpy(buff, tmp, src_size);
-			memset(tmp + src_size, 0, src_size);
-			delete[] buff;
-			buff = tmp;
-		}
-		else
 			return -1;
+		}
+
+		size *= 2;
+		char *tmp = new char[size];
+		memcpy(buff, tmp, src_size);
+		memset(tmp + src_size, 0, src_size);
+		delete[] buff;
+		buff = tmp;
 		return 0;
 	}
+
 	char *buff;
 	uint size;
 };
 
 }
-#endif
+#endif // !_ZSBH_BITMAP_H_

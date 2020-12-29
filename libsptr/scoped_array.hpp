@@ -1,5 +1,5 @@
-#ifndef _ZSBH_SPTR_SCOPED_ARRAY_
-#define _ZSBH_SPTR_SCOPED_ARRAY_
+#ifndef _ZSBH_SPTR_SCOPED_ARRAY_HPP_
+#define _ZSBH_SPTR_SCOPED_ARRAY_HPP_
 namespace zsbh {
 namespace sptr {
 
@@ -73,4 +73,4 @@ void swap(scoped_array<T> &a, scoped_array<T> &b)
 } //namesapce sptr
 } //namespace zsbh
 
-#endif
+#endif //!_ZSBH_SPTR_SCOPED_ARRAY_HPP_
