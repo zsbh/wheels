@@ -1,13 +1,9 @@
-#pragma once
-
 #ifndef _UNIVERSAL_LINK_LIST_H_
 #define _UNIVERSAL_LINK_LIST_H_
 
-/**无头单链表*/
-//chain链 void *next作用：做参照点找回_node 的钥匙，仅作为地址用(不可解引用)，故选void.
 
 /**
-typedef struct _list_node //节点形式
+typedef struct _list_node /
 {
 	void *next;
 	...
