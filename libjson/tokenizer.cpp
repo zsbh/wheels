@@ -66,15 +66,6 @@ Token Tokenizer::ReadNumber(char first) {
         /* code */
     } while (true);
     
-    switch (first) {
-        case '-':// 负数
-
-            break;   
-        case '0':
-            break; // 小数
-        default: 
-            break;
-    }
     
 }
 
